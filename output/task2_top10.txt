@@ -1,0 +1,489 @@
+# Task 2 – Top 10 largest communities (SCCs)
+
+## Community 1
+Size     : 133
+Diameter : 30
+Members  :
+  Xiwen Yao
+  Gong Cheng 0003
+  Junwei Han 0001
+  Dingwen Zhang
+  Xintao Hu
+  Heng Huang
+  Hua Wang 0007
+  Xiaoqian Wang 0001
+  Feiping Nie 0001
+  Rong Wang 0001
+  Xuelong Li 0001
+  Junyu Gao 0001
+  Yongsheng Dong
+  Hongyuan Zhang 0001
+  Xiaoqiang Lu
+  Yuan Yuan 0001
+  Huiyu Zhou 0001
+  Xiangrong Zhang
+  Jie Feng 0003
+  Ronghua Shang
+  Yangyang Li 0001
+  Yanqiao Chen
+  Weitong Zhang
+  Biao Hou
+  Hao Zhu 0009
+  Shuang Wang 0001
+  Wenping Ma 0001
+  Yue Wu 0004
+  Yongzhe Yuan
+  Xiaolong Fan
+  Hao Li 0009
+  Maoguo Gong
+  Yu Xie 0009
+  Bin Yu 0011
+  Chen Zhang 0015
+  Qing Cai
+  Lijia Ma
+  Qiuzhen Lin
+  Jianqiang Li 0001
+  Jie Chen 0027
+  Zedong Tang
+  Jia Liu 0020
+  Wenhua Zhang
+  Fang Liu 0034
+  Licheng Jiao
+  Shuyuan Yang 0001
+  Min Wang 0007
+  Zhixi Feng
+  Lingling Li 0002
+  Xianghai Cao
+  Lixia Yang
+  Fang Liu 0001
+  Xu Liu 0006
+  Jingjing Ma 0001
+  Xu Tang 0004
+  Guanchun Wang
+  Qiang Li 0042
+  Zhitong Xiong
+  Xiangtao Zheng
+  Mulin Chen
+  Bin Zhao 0001
+  Yanwei Pang
+  Jin Xie 0005
+  Qi Wang 0009
+  Dacheng Tao
+  Chang Xu 0002
+  Chaoyue Wang
+  Jing Zhao
+  Jiale Cao
+  Ling Shao 0001
+  Yi Yang 0001
+  Linchao Zhu
+  Fei Wu 0001
+  Yueting Zhuang
+  Jun Yang 0003
+  Alexander G. Hauptmann
+  Wei-Hao Lin 0003
+  Rong Jin 0001
+  Luo Si
+  Rong Yan
+  Kun Kuang
+  Qi Tian 0001
+  Jinhui Tang 0001
+  Zechao Li
+  Jing Liu 0001
+  Guo-Jun Qi
+  Meng Wang 0001
+  Zheng-Jun Zha
+  Heliang Zheng
+  Richang Hong
+  Jie Yu 0001
+  Nicu Sebe
+  Michael S. Lew
+  Ira Cohen
+  Xiaohan Wang
+  Xiaolin Wu 0001
+  Lei Zhang 0006
+  Liang Lin
+  Xiaodan Liang
+  Yunchao Wei
+  Wangmeng Zuo
+  David Zhang 0001
+  Jie Zhou 0001
+  Quanquan Gu
+  Pan Xu 0002
+  Jiafan He
+  Dongruo Zhou
+  Guangyi Chen 0002
+  Zijian Li 0001
+  Ruichu Cai
+  Yan Zeng 0002
+  Libo Huang
+  Sheng Ma
+  Tao Li 0001
+  Chris H. Q. Ding
+  Fei Wang 0001
+  Peng Cui 0001
+  Weilin Chen 0001
+  Wen Wen
+  Wei Chen 0103
+  Zhengming Chen 0002
+  Feng Xie 0002
+  Zhifeng Hao
+  Jie Qiao
+  Jiwen Lu
+  Venice Erin Liong
+  Junlin Hu 0001
+  Xiangjun Zhang
+  Rui Zhang 0017
+  Zheng Wang 0037
+  Shiming Xiang
+  Zhanxuan Hu
+  Xingxing Xie
+
+## Community 2
+Size     : 73
+Diameter : 35
+Members  :
+  Geoffrey Ye Li
+  Chenhao Qi 0001
+  Shiwen He
+  Yongming Huang 0001
+  Xiaohu You 0001
+  Chuan Zhang 0001
+  Pengcheng Zhu 0001
+  Lan Tang
+  Dongming Wang 0002
+  Jingyu Hua
+  Feng Li 0008
+  Li Wang 0041
+  Xin Liu 0009
+  Zhenyu Na
+  Weidang Lu
+  Yuan Wu 0001
+  Liang Huang 0006
+  Li Ping Qian 0001
+  Guoxing Huang
+  Yu Zhang 0015
+  Zhaoyang Zhang 0001
+  Caijun Zhong
+  Yuzhen Huang 0001
+  Kefeng Guo
+  Min Wu 0008
+  Zhenghua Chen
+  Yuecong Xu
+  Haozhi Cao
+  Jianfei Yang
+  Han Zou
+  Kai Wang 0036
+  Wangbo Zhao
+  Nian Liu 0002
+  Yuanwei Liu
+  Xingwang Li 0001
+  Ming Zeng 0002
+  Wanming Hao
+  Gangcan Sun
+  Zheng Chu 0001
+  Fuhui Zhou
+  Zhengyu Zhu 0001
+  Xiao Liu 0018
+  Zhaolin Wang 0001
+  Xidong Mu
+  Jiaqi Xu
+  Chongjun Ouyang
+  Hao Xu 0020
+  Fawaz S. Al-Qahtani
+  Redha M. Radaydeh
+  Richeng Jin
+  Xiaofan He
+  Ali Rahmati
+  Seyyedali Hosseinalipour
+  Minghui Liwang
+  Zhipeng Cheng
+  Ning Chen 0011
+  Peiying Zhang 0001
+  Chao Wang 0093
+  Haipeng Yao
+  Chao Qiu
+  Xiaofei Wang 0001
+  Xiuhua Li
+  Chenyang Wang 0001
+  Huazi Zhang
+  Cheng-Xiang Wang 0001
+  Hongjian Sun 0001
+  Nan Zhao 0001
+  Jing Jiang 0004
+  Jiamin Li 0001
+  Bin Sheng 0003
+  Wei Huang 0010
+  Caihong Kai
+  Zhijin Qin
+
+## Community 3
+Size     : 38
+Diameter : 13
+Members  :
+  Georg Gottlob
+  Nicola Leone
+  Giorgio Terracina
+  Luigi Palopoli 0001
+  Sergio Greco
+  Andrea Tagarelli
+  Roberto Interdonato
+  Gianluigi Greco
+  Marco Manna
+  Francesco Ricca
+  Simona Perri
+  Wolfgang Faber 0001
+  Luigi Bellomarini
+  Paolo Atzeni
+  Riccardo Torlone
+  Danilo Montesi
+  Elisa Bertino
+  Anna Cinzia Squicciarini
+  Christopher Griffin 0001
+  Smitha Sundareswaran
+  Vijayalakshmi Atluri
+  Vandana Pursnani Janeja
+  Soon Ae Chun
+  Paolo Cappellari
+  Nabil R. Adam
+  Aabhas V. Paliwal
+  Dinesh C. Verma
+  Seraphin B. Calo
+  Dan Lin 0001
+  Federica Paci
+  Bhavani Thuraisingham
+  Kevin W. Hamlen
+  Luca Cabibbo
+  Paolo Papotti
+  Giansalvatore Mecca
+  Matthias Lanzinger
+  Thomas Eiter
+  Magdalena Ortiz 0001
+
+## Community 4
+Size     : 34
+Diameter : 7
+Members  :
+  Donald Elmazi
+  Miralda Cuka
+  Keita Matsuo
+  Yi Liu 0011
+  Kosuke Ozera
+  Shinji Sakamoto
+  Admir Barolli
+  Fatos Xhafa
+  Evjola Spaho
+  Vladi Kolici
+  Leonard Barolli
+  Arjan Durresi
+  Vamsi Paruchuri
+  Masahiro Hiyama
+  Makoto Ikeda
+  Fumio Arakawa
+  Taiki Honda
+  Mimoza Durresi
+  Akio Koyama
+  Giuseppe De Marco
+  Santi Caball
+  Jordi Conesa
+  David Gan
+  Thanasis Daradoumis
+  Joanna Kolodziej
+  Takaaki Inaba
+  Seiji Ohara
+  Kevin Bylykbashi
+  Ermioni Qafzezi
+  Shunya Higashi
+  Elis Kulla
+  Phudit Ampririt
+  Ryoichiro Obukata
+  Tetsuya Oda
+
+## Community 5
+Size     : 33
+Diameter : 6
+Members  :
+  Giovanni Semeraro
+  Marco Degemmis
+  Marco de Gemmis
+  Fedelucio Narducci
+  Floriana Esposito
+  Nicola Fanizzi
+  Donato Malerba
+  Anna Ciampi
+  Annalisa Appice
+  Fabio Fumarola
+  Corrado Loglisci
+  Michelangelo Ceci
+  Roberto Corizzo
+  Marenglen Biba
+  Francesca A. Lisi
+  Stefano Ferilli
+  Davide Di Pierro
+  Andrea Pazienza
+  Eleonora Bernasconi
+  Berardina De Carolis
+  Fiorella de Rosis
+  Nicola Di Mauro
+  Teresa Maria Altomare Basile
+  Domenico Redavid
+  Claudia d'Amato
+  Antonio Vergari
+  Pasquale Lops
+  Lucia Siciliani
+  Marco Polignano
+  Annalina Caputo
+  Pierpaolo Basile
+  Pierluigi Cassotti
+  Cataldo Musto
+
+## Community 6
+Size     : 30
+Diameter : 17
+Members  :
+  Feng Xia 0001
+  Mingliang Hou
+  Wei Wang 0077
+  Haifeng Liu
+  Shuo Yu 0001
+  Xiangjie Kong 0001
+  Guojiang Shen
+  Honglong Chen
+  Zhibo Wang 0001
+  Xiaoyi Pang
+  Qian Wang 0002
+  Shengshan Hu
+  Wei Wan
+  Minghui Li
+  Yechao Zhang
+  Kui Ren 0001
+  Jin Li 0002
+  Xiaofeng Chen 0001
+  Fangguo Zhang
+  Shengli Liu 0001
+  Jian Weng 0001
+  Yang Yang 0026
+  Ximeng Liu
+  Qian Liu
+  Zhiguo Gong
+  Jinbo Xiong
+  Qi Li 0011
+  Haibo Tian
+  Jingwei Li 0001
+  Zheli Liu
+
+## Community 7
+Size     : 27
+Diameter : 10
+Members  :
+  Gautam Srivastava 0001
+  Jerry Chun-Wei Lin
+  Chun-Hao Chen
+  Wensheng Gan
+  Chien-Ming Chen 0001
+  Tsu-Yang Wu
+  Yuh-Min Tseng
+  Tung-Tso Tsai
+  Jui-Di Wu
+  Hung-Min Sun
+  Jiahui Chen 0002
+  Shicheng Wan
+  Philippe Fournier-Viger
+  Usef Faghihi
+  Tzung-Pei Hong
+  Yu-Chuan Tsai
+  Shyue-Liang Wang
+  Ja-Hwung Su
+  Vincent S. Tseng
+  Yeong-Chyi Lee
+  Chun-Wei Lin 0001
+  Wen-Yang Lin
+  Ming-Cheng Tseng
+  Guo-Cheng Lan
+  Jimmy Ming-Tai Wu
+  Youcef Djenouri
+  Asma Belhadi
+
+## Community 8
+Size     : 26
+Diameter : 12
+Members  :
+  Petar Popovski
+  Jimmy Jessen Nielsen
+  Nuno K. Pratas
+  Emil Bjrnson
+  Zheng Chen 0002
+  Nikolaos Pappas 0001
+  Marios Kountouris
+  Luca Sanguinetti
+  Antonio A. D'Amico
+  Alessio Zappone
+  Stefano Buzzi
+  Luca Venturino
+  Emanuele Grossi
+  Carmen D'Andrea
+  Marco Di Renzo
+  Athanasios Stavridis 0001
+  Henk Wymeersch
+  Musa Furkan Keskin
+  George C. Alexandropoulos
+  Konstantinos D. Katsanos
+  Aris L. Moustakas
+  Wei Lu 0012
+  Michele Morelli
+  Elisabeth de Carvalho
+  Cedomir Stefanovic
+  Kasper F. Trillingsgaard
+
+## Community 9
+Size     : 23
+Diameter : 6
+Members  :
+  Bjrn W. Schuller
+  Jing Han 0010
+  Shahin Amiriparian
+  Zixing Zhang 0001
+  Alice Baird
+  Dejan Arsic
+  Panagiotis Tzirakis
+  Jun Deng
+  Yue Zhang 0014
+  Zhao Ren
+  Alexander Kathan
+  Felix Weninger
+  Shuo Liu 0012
+  Felix Burkhardt
+  Lukas Christ
+  Florian Eyben
+  Kun Qian 0003
+  Xinzhou Xu
+  Martin Wllmer
+  Maurice Gerczuk
+  Andreas Triantafyllopoulos
+  Nicholas Cummins
+  Anton Batliner
+
+## Community 10
+Size     : 21
+Diameter : 7
+Members  :
+  Olivier Boissier
+  Jomi Fred Hbner
+  Rafael H. Bordini
+  Alessandro Ricci
+  Andrea Santi
+  Mirko Viroli
+  Gianluca Aguzzi
+  Jacob Beal
+  Roberto Casadei
+  Danilo Pianini
+  Sara Montagna
+  Matteo Casadei
+  Ferruccio Damiani
+  Michael Lienhardt
+  Franco Zambonelli
+  Marco Mamei
+  Giorgio Audrito
+  Angelo Croatti
+  Andrea Omicini
+  Enrico Denti
+  Michele Piunti
