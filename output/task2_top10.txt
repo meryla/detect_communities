@@ -1,15 +1,215 @@
 # Task 2 – Top 10 largest communities (SCCs)
 
 ## Community 1
-Size     : 133
-Diameter : 30
+Size     : 195
+Diameter : 45
+Members  :
+  Qingqing Wu 0001
+  Xiaobo Zhou 0004
+  Guiyang Xia
+  Feng Shu 0002
+  Yan Wang 0027
+  Pengcheng Zhu 0001
+  Lan Tang
+  Jiamin Li 0001
+  Bin Sheng 0003
+  Xiaohu You 0001
+  Chuan Zhang 0001
+  Yongming Huang 0001
+  Shiwen He
+  Haiyang Zhang 0001
+  Wei Huang 0010
+  Caihong Kai
+  Dongming Wang 0002
+  Jingyu Hua
+  Feng Li 0008
+  Li Wang 0041
+  Xin Liu 0009
+  Zhenyu Na
+  Weidang Lu
+  Yuan Wu 0001
+  Liang Huang 0006
+  Li Ping Qian 0001
+  Guoxing Huang
+  Yu Zhang 0015
+  Zhaoyang Zhang 0001
+  Caijun Zhong
+  Yuzhen Huang 0001
+  Kefeng Guo
+  Min Wu 0008
+  Zhenghua Chen
+  Yuecong Xu
+  Haozhi Cao
+  Jianfei Yang
+  Han Zou
+  Kai Wang 0036
+  Wangbo Zhao
+  Nian Liu 0002
+  Yuanwei Liu
+  Xingwang Li 0001
+  Ji Wang 0004
+  Wenwu Xie
+  Ming Zeng 0002
+  Wanming Hao
+  Gangcan Sun
+  Zheng Chu 0001
+  Fuhui Zhou
+  Zhengyu Zhu 0001
+  Xiao Liu 0018
+  Zhaolin Wang 0001
+  Xidong Mu
+  Jiaqi Xu
+  Wenqiang Yi
+  Chongjun Ouyang
+  Hao Xu 0020
+  Zhijin Qin
+  Geoffrey Ye Li
+  Chenhao Qi 0001
+  Boya Di
+  Hongliang Zhang 0001
+  Minghui Min
+  Zhipeng Cheng
+  Ning Chen 0011
+  Peiying Zhang 0001
+  Chao Wang 0093
+  Haipeng Yao
+  Chao Qiu
+  Xiaofei Wang 0001
+  Chenyang Wang 0001
+  Xiuhua Li 0001
+  Xinyu Gao
+  Linglong Dai
+  Bichai Wang
+  Zhen Gao 0001
+  Zhuoran Li
+  Zhengfang Duanmu
+  Kede Ma
+  Yuming Fang
+  Wenying Wen
+  Yushu Zhang 0001
+  Shuren Qi
+  Leo Yu Zhang
+  Wei Wan
+  Shengshan Hu
+  Qian Wang 0002
+  Zhibo Wang 0001
+  Xiaoyi Pang
+  Peng Sun 0003
+  Liantao Wu
+  Honglong Chen
+  Kui Ren 0001
+  Jin Li 0002
+  Xiaofeng Chen 0001
+  Fangguo Zhang
+  Shengli Liu 0001
+  Jian Weng 0001
+  Yang Yang 0026
+  Ximeng Liu
+  Yanhua Zhang
+  Meng Li 0007
+  Zhuwei Wang
+  Chao Fang 0001
+  Pengbo Si
+  Qian Liu
+  Zhiguo Gong
+  Wei Wang 0077
+  Feng Xia 0001
+  Mingliang Hou
+  Haifeng Liu
+  Shuo Yu 0001
+  Fangming Zhong
+  Zhikui Chen
+  Xiangjie Kong 0001
+  Guojiang Shen
+  Zhaolong Ning
+  Xiaojie Wang 0001
+  Weigang Hou
+  Lei Guo 0005
+  Xingwei Wang 0001
+  Min Huang 0001
+  Peng Cao 0001
+  Zhiqiang Shen
+  Zechun Liu
+  Zhuang Liu 0003
+  Gao Huang 0001
+  Yizeng Han
+  Yifan Pu
+  Xiaoli Liu 0001
+  Hui Cheng 0004
+  Jinbo Xiong
+  Qi Li 0011
+  Haibo Tian
+  Jingwei Li 0001
+  Zheli Liu
+  Minghui Li
+  Yechao Zhang
+  Mingfu Xue
+  Xiangjie Sui
+  Jiebin Yan
+  Weide Liu
+  Xuelin Liu
+  Yifan Zuo
+  Zhihua Wang 0002
+  Qiuping Jiang
+  Feng Shao 0001
+  Gangyi Jiang
+  Fen Chen
+  Zongju Peng
+  Yun Zhang 0002
+  Xu Wang 0006
+  Zhaoqing Pan
+  Jianjun Lei 0001
+  Bo Peng 0007
+  Long Xu 0001
+  Lin Ma 0002
+  Linwei Zhu
+  Mei Yu 0001
+  Fawaz S. Al-Qahtani
+  Redha M. Radaydeh
+  Lei Liu 0005
+  Chongwen Huang
+  Yuhao Chi
+  Junyu Liu
+  Min Sheng
+  Chungang Yang
+  Yao Wang 0001
+  Wenwu Zhu 0001
+  Hong Chen 0011
+  Xin Wang 0019
+  Jiangchuan Liu
+  Edith C. H. Ngai
+  Xiping Hu
+  Xiaowen Chu 0001
+  Yuxin Wang 0003
+  Qiang Wang 0022
+  Shaohuai Shi
+  Zhenheng Tang
+  Richeng Jin
+  Xiaofan He
+  Ali Rahmati
+  Seyyedali Hosseinalipour
+  Minghui Liwang
+  Huazi Zhang
+  Cheng-Xiang Wang 0001
+  Hongjian Sun 0001
+  Nan Zhao 0001
+  Jing Jiang 0004
+  Yang Yang 0001
+  Kunlun Wang 0001
+  Jun Li 0004
+  Chuan Ma 0001
+  Kang Wei 0004
+
+## Community 2
+Size     : 117
+Diameter : 24
 Members  :
   Xiwen Yao
   Gong Cheng 0003
   Junwei Han 0001
   Dingwen Zhang
   Xintao Hu
-  Heng Huang
+  Heng Huang 0001
   Hua Wang 0007
   Xiaoqian Wang 0001
   Feiping Nie 0001
@@ -84,20 +284,6 @@ Members  :
   Rong Jin 0001
   Luo Si
   Rong Yan
-  Kun Kuang
-  Qi Tian 0001
-  Jinhui Tang 0001
-  Zechao Li
-  Jing Liu 0001
-  Guo-Jun Qi
-  Meng Wang 0001
-  Zheng-Jun Zha
-  Heliang Zheng
-  Richang Hong
-  Jie Yu 0001
-  Nicu Sebe
-  Michael S. Lew
-  Ira Cohen
   Xiaohan Wang
   Xiaolin Wu 0001
   Lei Zhang 0006
@@ -119,10 +305,8 @@ Members  :
   Sheng Ma
   Tao Li 0001
   Chris H. Q. Ding
-  Fei Wang 0001
-  Peng Cui 0001
   Weilin Chen 0001
-  Wen Wen
+  Wen Wen 0009
   Wei Chen 0103
   Zhengming Chen 0002
   Feng Xie 0002
@@ -137,84 +321,6 @@ Members  :
   Shiming Xiang
   Zhanxuan Hu
   Xingxing Xie
-
-## Community 2
-Size     : 73
-Diameter : 35
-Members  :
-  Geoffrey Ye Li
-  Chenhao Qi 0001
-  Shiwen He
-  Yongming Huang 0001
-  Xiaohu You 0001
-  Chuan Zhang 0001
-  Pengcheng Zhu 0001
-  Lan Tang
-  Dongming Wang 0002
-  Jingyu Hua
-  Feng Li 0008
-  Li Wang 0041
-  Xin Liu 0009
-  Zhenyu Na
-  Weidang Lu
-  Yuan Wu 0001
-  Liang Huang 0006
-  Li Ping Qian 0001
-  Guoxing Huang
-  Yu Zhang 0015
-  Zhaoyang Zhang 0001
-  Caijun Zhong
-  Yuzhen Huang 0001
-  Kefeng Guo
-  Min Wu 0008
-  Zhenghua Chen
-  Yuecong Xu
-  Haozhi Cao
-  Jianfei Yang
-  Han Zou
-  Kai Wang 0036
-  Wangbo Zhao
-  Nian Liu 0002
-  Yuanwei Liu
-  Xingwang Li 0001
-  Ming Zeng 0002
-  Wanming Hao
-  Gangcan Sun
-  Zheng Chu 0001
-  Fuhui Zhou
-  Zhengyu Zhu 0001
-  Xiao Liu 0018
-  Zhaolin Wang 0001
-  Xidong Mu
-  Jiaqi Xu
-  Chongjun Ouyang
-  Hao Xu 0020
-  Fawaz S. Al-Qahtani
-  Redha M. Radaydeh
-  Richeng Jin
-  Xiaofan He
-  Ali Rahmati
-  Seyyedali Hosseinalipour
-  Minghui Liwang
-  Zhipeng Cheng
-  Ning Chen 0011
-  Peiying Zhang 0001
-  Chao Wang 0093
-  Haipeng Yao
-  Chao Qiu
-  Xiaofei Wang 0001
-  Xiuhua Li
-  Chenyang Wang 0001
-  Huazi Zhang
-  Cheng-Xiang Wang 0001
-  Hongjian Sun 0001
-  Nan Zhao 0001
-  Jing Jiang 0004
-  Jiamin Li 0001
-  Bin Sheng 0003
-  Wei Huang 0010
-  Caihong Kai
-  Zhijin Qin
 
 ## Community 3
 Size     : 38
@@ -272,6 +378,9 @@ Members  :
   Admir Barolli
   Fatos Xhafa
   Evjola Spaho
+  Santi Caballé
+  Jordi Conesa
+  David Gañán
   Vladi Kolici
   Leonard Barolli
   Arjan Durresi
@@ -283,9 +392,6 @@ Members  :
   Mimoza Durresi
   Akio Koyama
   Giuseppe De Marco
-  Santi Caball
-  Jordi Conesa
-  David Gan
   Thanasis Daradoumis
   Joanna Kolodziej
   Takaaki Inaba
@@ -337,39 +443,36 @@ Members  :
   Cataldo Musto
 
 ## Community 6
-Size     : 30
-Diameter : 17
+Size     : 27
+Diameter : 8
 Members  :
-  Feng Xia 0001
-  Mingliang Hou
-  Wei Wang 0077
-  Haifeng Liu
-  Shuo Yu 0001
-  Xiangjie Kong 0001
-  Guojiang Shen
-  Honglong Chen
-  Zhibo Wang 0001
-  Xiaoyi Pang
-  Qian Wang 0002
-  Shengshan Hu
-  Wei Wan
-  Minghui Li
-  Yechao Zhang
-  Kui Ren 0001
-  Jin Li 0002
-  Xiaofeng Chen 0001
-  Fangguo Zhang
-  Shengli Liu 0001
-  Jian Weng 0001
-  Yang Yang 0026
-  Ximeng Liu
-  Qian Liu
-  Zhiguo Gong
-  Jinbo Xiong
-  Qi Li 0011
-  Haibo Tian
-  Jingwei Li 0001
-  Zheli Liu
+  Björn W. Schuller
+  Jing Han 0010
+  Shahin Amiriparian
+  Zixing Zhang 0001
+  Zhongren Dong
+  Alice Baird
+  Dejan Arsic
+  Martin Wöllmer
+  Panagiotis Tzirakis
+  Jun Deng
+  Yue Zhang 0014
+  Zhao Ren
+  Thanh Tam Nguyen
+  Thanh Trung Huynh
+  Alexander Kathan
+  Felix Weninger
+  Shuo Liu 0012
+  Felix Burkhardt
+  Lukas Christ
+  Florian Eyben
+  Kun Qian 0003
+  Xinzhou Xu
+  Maurice Gerczuk
+  Andreas Triantafyllopoulos
+  Manuel Milling
+  Nicholas Cummins
+  Anton Batliner
 
 ## Community 7
 Size     : 27
@@ -407,15 +510,21 @@ Members  :
 Size     : 26
 Diameter : 12
 Members  :
-  Petar Popovski
-  Jimmy Jessen Nielsen
-  Nuno K. Pratas
-  Emil Bjrnson
+  George C. Alexandropoulos
+  Konstantinos D. Katsanos
+  Aris L. Moustakas
+  Luca Sanguinetti
+  Antonio A. D'Amico
+  Emil Björnson
   Zheng Chen 0002
   Nikolaos Pappas 0001
   Marios Kountouris
-  Luca Sanguinetti
-  Antonio A. D'Amico
+  Elisabeth de Carvalho
+  Petar Popovski
+  Jimmy Jessen Nielsen
+  Nuno K. Pratas
+  Cedomir Stefanovic
+  Kasper F. Trillingsgaard
   Alessio Zappone
   Stefano Buzzi
   Luca Venturino
@@ -425,49 +534,15 @@ Members  :
   Athanasios Stavridis 0001
   Henk Wymeersch
   Musa Furkan Keskin
-  George C. Alexandropoulos
-  Konstantinos D. Katsanos
-  Aris L. Moustakas
   Wei Lu 0012
   Michele Morelli
-  Elisabeth de Carvalho
-  Cedomir Stefanovic
-  Kasper F. Trillingsgaard
 
 ## Community 9
-Size     : 23
-Diameter : 6
-Members  :
-  Bjrn W. Schuller
-  Jing Han 0010
-  Shahin Amiriparian
-  Zixing Zhang 0001
-  Alice Baird
-  Dejan Arsic
-  Panagiotis Tzirakis
-  Jun Deng
-  Yue Zhang 0014
-  Zhao Ren
-  Alexander Kathan
-  Felix Weninger
-  Shuo Liu 0012
-  Felix Burkhardt
-  Lukas Christ
-  Florian Eyben
-  Kun Qian 0003
-  Xinzhou Xu
-  Martin Wllmer
-  Maurice Gerczuk
-  Andreas Triantafyllopoulos
-  Nicholas Cummins
-  Anton Batliner
-
-## Community 10
 Size     : 21
 Diameter : 7
 Members  :
   Olivier Boissier
-  Jomi Fred Hbner
+  Jomi Fred Hübner
   Rafael H. Bordini
   Alessandro Ricci
   Andrea Santi
@@ -487,3 +562,27 @@ Members  :
   Andrea Omicini
   Enrico Denti
   Michele Piunti
+
+## Community 10
+Size     : 19
+Diameter : 12
+Members  :
+  Athman Bouguettaya
+  Qi Yu 0001
+  Brahim Medjahed
+  Mourad Ouzzani
+  Muhammad Umair
+  Jan Treur
+  Catholijn M. Jonker
+  Matthew Johnson 0001
+  Jeffrey M. Bradshaw
+  Larry Bunch
+  Niranjan Suri
+  Mauro Tortonesi
+  Claudio Bartolini
+  Hamid R. Motahari Nezhad
+  Boualem Benatallah
+  Roberto Fronteddu
+  Alessandro Morelli
+  Andrzej Uszok
+  Xumin Liu

@@ -60,7 +60,7 @@ javac -d bin \
   src/task2/KosarajuSCC.java \
   src/task2/DiameterCalculator.java \
   src/task2/Task2Processor.java \
-  src/main.java
+  src/Main.java
 ```
 
 Sur Windows (une seule ligne) :
