@@ -1,0 +1,136 @@
+Community 1
+Size: 195
+Diameter: 45
+Country proportions:
+  CN: 75.9%
+  US: 7.18%
+  UNKNOWN: 3.59%
+  HK: 3.08%
+  CA: 2.05%
+  SG: 2.05%
+  GB: 1.03%
+  RW: 1.03%
+  MO: 1.03%
+  IN: 0.51%
+  DE: 0.51%
+  IE: 0.51%
+  AU: 0.51%
+  QA: 0.51%
+  ME: 0.51%
+
+Community 2
+Size: 117
+Diameter: 24
+Country proportions:
+  CN: 79.49%
+  US: 5.98%
+  UNKNOWN: 4.27%
+  GB: 1.71%
+  HK: 1.71%
+  ME: 0.85%
+  CH: 0.85%
+  DE: 0.85%
+  SG: 0.85%
+  AU: 0.85%
+  DK: 0.85%
+  ID: 0.85%
+  IN: 0.85%
+
+Community 3
+Size: 38
+Diameter: 13
+Country proportions:
+  IT: 42.11%
+  US: 31.58%
+  UNKNOWN: 15.79%
+  AT: 5.26%
+  FR: 2.63%
+  CN: 2.63%
+
+Community 4
+Size: 34
+Diameter: 7
+Country proportions:
+  JP: 55.88%
+  AL: 14.71%
+  ES: 14.71%
+  CN: 2.94%
+  UNKNOWN: 2.94%
+  US: 2.94%
+  IT: 2.94%
+  PL: 2.94%
+
+Community 5
+Size: 33
+Diameter: 6
+Country proportions:
+  IT: 63.64%
+  UNKNOWN: 21.21%
+  US: 3.03%
+  AL: 3.03%
+  GB: 3.03%
+  BR: 3.03%
+  DK: 3.03%
+
+Community 6
+Size: 27
+Diameter: 8
+Country proportions:
+  UNKNOWN: 33.33%
+  DE: 22.22%
+  CN: 18.52%
+  GB: 14.81%
+  US: 3.7%
+  VN: 3.7%
+  AT: 3.7%
+
+Community 7
+Size: 27
+Diameter: 10
+Country proportions:
+  TW: 40.74%
+  CN: 29.63%
+  PL: 7.41%
+  NO: 7.41%
+  US: 3.7%
+  YE: 3.7%
+  BY: 3.7%
+  VN: 3.7%
+
+Community 8
+Size: 26
+Diameter: 12
+Country proportions:
+  IT: 30.77%
+  DK: 19.23%
+  GR: 15.38%
+  SE: 11.54%
+  CN: 11.54%
+  ES: 3.85%
+  US: 3.85%
+  FR: 3.85%
+
+Community 9
+Size: 21
+Diameter: 7
+Country proportions:
+  IT: 57.14%
+  UNKNOWN: 23.81%
+  BR: 4.76%
+  CA: 4.76%
+  US: 4.76%
+  FR: 4.76%
+
+Community 10
+Size: 19
+Diameter: 12
+Country proportions:
+  US: 47.37%
+  IT: 15.79%
+  NL: 10.53%
+  AU: 5.26%
+  CN: 5.26%
+  QA: 5.26%
+  SA: 5.26%
+  IE: 5.26%
+

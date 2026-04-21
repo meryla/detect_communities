@@ -1,0 +1,274 @@
+[
+  {
+    "community_id": 1,
+    "size": 195,
+    "diameter": 45,
+    "total_authors_found": 195,
+    "country_counts": {
+      "CN": 148,
+      "CA": 4,
+      "SG": 4,
+      "UNKNOWN": 7,
+      "IN": 1,
+      "US": 14,
+      "HK": 6,
+      "GB": 2,
+      "DE": 1,
+      "IE": 1,
+      "RW": 2,
+      "MO": 2,
+      "AU": 1,
+      "QA": 1,
+      "ME": 1
+    },
+    "country_proportions_percent": {
+      "CN": 75.9,
+      "CA": 2.05,
+      "SG": 2.05,
+      "UNKNOWN": 3.59,
+      "IN": 0.51,
+      "US": 7.18,
+      "HK": 3.08,
+      "GB": 1.03,
+      "DE": 0.51,
+      "IE": 0.51,
+      "RW": 1.03,
+      "MO": 1.03,
+      "AU": 0.51,
+      "QA": 0.51,
+      "ME": 0.51
+    }
+  },
+  {
+    "community_id": 2,
+    "size": 117,
+    "diameter": 24,
+    "total_authors_found": 117,
+    "country_counts": {
+      "CN": 93,
+      "UNKNOWN": 5,
+      "US": 7,
+      "GB": 2,
+      "ME": 1,
+      "CH": 1,
+      "DE": 1,
+      "SG": 1,
+      "AU": 1,
+      "DK": 1,
+      "HK": 2,
+      "ID": 1,
+      "IN": 1
+    },
+    "country_proportions_percent": {
+      "CN": 79.49,
+      "UNKNOWN": 4.27,
+      "US": 5.98,
+      "GB": 1.71,
+      "ME": 0.85,
+      "CH": 0.85,
+      "DE": 0.85,
+      "SG": 0.85,
+      "AU": 0.85,
+      "DK": 0.85,
+      "HK": 1.71,
+      "ID": 0.85,
+      "IN": 0.85
+    }
+  },
+  {
+    "community_id": 3,
+    "size": 38,
+    "diameter": 13,
+    "total_authors_found": 38,
+    "country_counts": {
+      "IT": 16,
+      "FR": 1,
+      "AT": 2,
+      "US": 12,
+      "UNKNOWN": 6,
+      "CN": 1
+    },
+    "country_proportions_percent": {
+      "IT": 42.11,
+      "FR": 2.63,
+      "AT": 5.26,
+      "US": 31.58,
+      "UNKNOWN": 15.79,
+      "CN": 2.63
+    }
+  },
+  {
+    "community_id": 4,
+    "size": 34,
+    "diameter": 7,
+    "total_authors_found": 34,
+    "country_counts": {
+      "AL": 5,
+      "JP": 19,
+      "CN": 1,
+      "ES": 5,
+      "UNKNOWN": 1,
+      "US": 1,
+      "IT": 1,
+      "PL": 1
+    },
+    "country_proportions_percent": {
+      "AL": 14.71,
+      "JP": 55.88,
+      "CN": 2.94,
+      "ES": 14.71,
+      "UNKNOWN": 2.94,
+      "US": 2.94,
+      "IT": 2.94,
+      "PL": 2.94
+    }
+  },
+  {
+    "community_id": 5,
+    "size": 33,
+    "diameter": 6,
+    "total_authors_found": 33,
+    "country_counts": {
+      "UNKNOWN": 7,
+      "IT": 21,
+      "US": 1,
+      "AL": 1,
+      "GB": 1,
+      "BR": 1,
+      "DK": 1
+    },
+    "country_proportions_percent": {
+      "UNKNOWN": 21.21,
+      "IT": 63.64,
+      "US": 3.03,
+      "AL": 3.03,
+      "GB": 3.03,
+      "BR": 3.03,
+      "DK": 3.03
+    }
+  },
+  {
+    "community_id": 6,
+    "size": 27,
+    "diameter": 8,
+    "total_authors_found": 27,
+    "country_counts": {
+      "GB": 4,
+      "CN": 5,
+      "DE": 6,
+      "UNKNOWN": 9,
+      "US": 1,
+      "VN": 1,
+      "AT": 1
+    },
+    "country_proportions_percent": {
+      "GB": 14.81,
+      "CN": 18.52,
+      "DE": 22.22,
+      "UNKNOWN": 33.33,
+      "US": 3.7,
+      "VN": 3.7,
+      "AT": 3.7
+    }
+  },
+  {
+    "community_id": 7,
+    "size": 27,
+    "diameter": 10,
+    "total_authors_found": 27,
+    "country_counts": {
+      "TW": 11,
+      "PL": 2,
+      "US": 1,
+      "CN": 8,
+      "YE": 1,
+      "BY": 1,
+      "VN": 1,
+      "NO": 2
+    },
+    "country_proportions_percent": {
+      "TW": 40.74,
+      "PL": 7.41,
+      "US": 3.7,
+      "CN": 29.63,
+      "YE": 3.7,
+      "BY": 3.7,
+      "VN": 3.7,
+      "NO": 7.41
+    }
+  },
+  {
+    "community_id": 8,
+    "size": 26,
+    "diameter": 12,
+    "total_authors_found": 26,
+    "country_counts": {
+      "GR": 4,
+      "IT": 8,
+      "SE": 3,
+      "CN": 3,
+      "ES": 1,
+      "DK": 5,
+      "US": 1,
+      "FR": 1
+    },
+    "country_proportions_percent": {
+      "GR": 15.38,
+      "IT": 30.77,
+      "SE": 11.54,
+      "CN": 11.54,
+      "ES": 3.85,
+      "DK": 19.23,
+      "US": 3.85,
+      "FR": 3.85
+    }
+  },
+  {
+    "community_id": 9,
+    "size": 21,
+    "diameter": 7,
+    "total_authors_found": 21,
+    "country_counts": {
+      "UNKNOWN": 5,
+      "BR": 1,
+      "CA": 1,
+      "IT": 12,
+      "US": 1,
+      "FR": 1
+    },
+    "country_proportions_percent": {
+      "UNKNOWN": 23.81,
+      "BR": 4.76,
+      "CA": 4.76,
+      "IT": 57.14,
+      "US": 4.76,
+      "FR": 4.76
+    }
+  },
+  {
+    "community_id": 10,
+    "size": 19,
+    "diameter": 12,
+    "total_authors_found": 19,
+    "country_counts": {
+      "AU": 1,
+      "CN": 1,
+      "US": 9,
+      "QA": 1,
+      "SA": 1,
+      "NL": 2,
+      "IT": 3,
+      "IE": 1
+    },
+    "country_proportions_percent": {
+      "AU": 5.26,
+      "CN": 5.26,
+      "US": 47.37,
+      "QA": 5.26,
+      "SA": 5.26,
+      "NL": 10.53,
+      "IT": 15.79,
+      "IE": 5.26
+    }
+  }
+]
