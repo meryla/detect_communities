@@ -22,8 +22,8 @@ Community 2
 Size: 117
 Diameter: 24
 Country proportions:
-  CN: 79.49%
-  US: 5.98%
+  CN: 78.63%
+  US: 6.84%
   UNKNOWN: 4.27%
   GB: 1.71%
   HK: 1.71%

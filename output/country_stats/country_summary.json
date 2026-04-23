@@ -45,9 +45,9 @@
     "diameter": 24,
     "total_authors_found": 117,
     "country_counts": {
-      "CN": 93,
+      "CN": 92,
       "UNKNOWN": 5,
-      "US": 7,
+      "US": 8,
       "GB": 2,
       "ME": 1,
       "CH": 1,
@@ -60,9 +60,9 @@
       "IN": 1
     },
     "country_proportions_percent": {
-      "CN": 79.49,
+      "CN": 78.63,
       "UNKNOWN": 4.27,
-      "US": 5.98,
+      "US": 6.84,
       "GB": 1.71,
       "ME": 0.85,
       "CH": 0.85,

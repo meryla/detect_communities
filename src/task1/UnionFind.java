@@ -3,25 +3,21 @@ package task1;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * This class implements Union-Find (Disjoint Set).
+ * It is used to group authors into communities.
+ */
 public class UnionFind {
 
-    /*
-     * parent.get(x) gives the parent of x in the Union-Find tree.
-     * If parent.get(x).equals(x), then x is the root of its set.
-     *
-     * We use String because authors are identified by their names in DBLP.
-     */
+    // parent[x] = parent of x in the tree
+    // if parent[x] == x → x is the root
     private final Map<String, String> parent;
 
-    /*
-     * size.get(root) = number of authors in the community represented by root.
-     * This value is only correct for roots.
-     */
+    // size[root] = number of elements in that community
+    // only valid for roots
     private final Map<String, Integer> size;
 
-    /*
-     * Number of connected components (communities) currently known.
-     */
+    // total number of separate communities
     private int componentCount;
 
     public UnionFind() {
@@ -32,46 +28,49 @@ public class UnionFind {
 
     /*
      * Adds a new author if not already present.
-     * Initially, each author is alone in its own set.
+     * Initially, each author is its own parent (own community).
      */
     public void addIfAbsent(String author) {
         if (!parent.containsKey(author)) {
-            parent.put(author, author);
-            size.put(author, 1);
-            componentCount++;
+            parent.put(author, author); // points to itself
+            size.put(author, 1);        // size = 1
+            componentCount++;           // new community created
         }
     }
 
     /*
-     * Finds the representative (root) of the set containing author.
+     * Finds the root of the set containing 'author'.
      *
      * Path compression:
-     * after finding the root, we make nodes point more directly to it.
-     * This speeds up future operations.
+     * we make nodes point directly to the root to speed things up.
      */
     public String find(String author) {
         String p = parent.get(author);
+
+        // if not root, recursively find root and compress path
         if (!p.equals(author)) {
             parent.put(author, find(p));
         }
+
         return parent.get(author);
     }
 
     /*
-     * Merges the communities of a and b.
+     * Merges the sets of a and b.
      *
-     * Union by size:
-     * attach the smaller tree below the larger one.
-     * This helps keep trees shallow and operations fast.
+     * Uses union by size:
+     * smaller tree goes under the bigger one.
      */
     public void union(String a, String b) {
+
+        // make sure both exist
         addIfAbsent(a);
         addIfAbsent(b);
 
         String rootA = find(a);
         String rootB = find(b);
 
-        // Already in the same community: nothing to do.
+        // if already in same set → nothing to do
         if (rootA.equals(rootB)) {
             return;
         }
@@ -79,37 +78,43 @@ public class UnionFind {
         int sizeA = size.get(rootA);
         int sizeB = size.get(rootB);
 
-        // Ensure rootA is the larger root.
+        // make sure rootA is the bigger tree
         if (sizeA < sizeB) {
+
+            // swap roots
             String tmpRoot = rootA;
             rootA = rootB;
             rootB = tmpRoot;
 
+            // swap sizes
             int tmpSize = sizeA;
             sizeA = sizeB;
             sizeB = tmpSize;
         }
 
-        // Attach smaller rootB under larger rootA.
+        // attach smaller rootB under larger rootA
         parent.put(rootB, rootA);
+
+        // update size of the new root
         size.put(rootA, sizeA + sizeB);
 
-        // rootB is no longer a root, so its size is not needed anymore.
+        // rootB is no longer a root → remove its size entry
         size.remove(rootB);
 
+        // one less community after merging
         componentCount--;
     }
 
     /*
-     * Returns the current number of communities.
+     * Returns number of current communities.
      */
     public int getComponentCount() {
         return componentCount;
     }
 
     /*
-     * Returns a map root -> size for all current communities.
-     * We return a copy to avoid exposing internal structures.
+     * Returns a copy of root → size map.
+     * (we return a copy so outside code can't modify internal data)
      */
     public Map<String, Integer> getRootSizes() {
         return new HashMap<>(size);

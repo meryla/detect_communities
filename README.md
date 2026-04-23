@@ -1,52 +1,47 @@
 # README.md — Projet Algorithmique 2 (DBLP Communities)
 
 ## Structure du projet
-
-```
 project/
 ├── src/
-│   ├── main.java                          # Point d'entrée principal
-│   ├── DblpPublicationGenerator.java      # Parseur fourni (ne pas modifier)
-│   ├── DblpParsingDemo.java               # Démo fournie (ne pas modifier)
-│   ├── task1/
-│   │   ├── UnionFind.java                 # Structure Union-Find
-│   │   └── Task1Processor.java            # Logique de la tâche 1
-│   ├── task2/
-│   │   ├── PairCounter.java               # Comptage en ligne des paires (A → B)
-│   │   ├── DirectedGraph.java             # Structure graphe orienté
-│   │   ├── GraphBuilder.java              # Construction du graphe filtré (seuil >= 6)
-│   │   ├── KosarajuSCC.java               # Algorithme de Kosaraju (SCC)
-│   │   ├── DiameterCalculator.java        # Calcul du diamètre par BFS
-│   │   └── Task2Processor.java            # Orchestrateur de la tâche 2
-│   └── utils/
-│       ├── AuthorUtils.java               # Nettoyage des listes d'auteurs
-│       └── HistogramWriter.java           # Écriture des histogrammes
+│ ├── main.java # Point d'entrée principal
+│ ├── DblpPublicationGenerator.java # Parseur fourni (ne pas modifier)
+│ ├── DblpParsingDemo.java # Démo fournie (ne pas modifier)
+│ ├── task1/
+│ │ ├── UnionFind.java # Structure Union-Find
+│ │ └── Task1Processor.java # Logique de la tâche 1
+│ ├── task2/
+│ │ ├── PairCounter.java # Comptage en ligne des paires (A → B)
+│ │ ├── DirectedGraph.java # Structure graphe orienté
+│ │ ├── GraphBuilder.java # Construction du graphe filtré (seuil >= 6)
+│ │ ├── KosarajuSCC.java # Algorithme de Kosaraju (SCC)
+│ │ ├── DiameterCalculator.java # Calcul du diamètre par BFS
+│ │ └── Task2Processor.java # Orchestrateur de la tâche 2
+│ └── utils/
+│ ├── AuthorUtils.java # Nettoyage des listes d'auteurs
+│ └── HistogramWriter.java # Écriture des histogrammes
 │
 ├── data/
-│   ├── dblp-2026-01-01.xml.gz             # Snapshot DBLP (à télécharger séparément)
-│   └── dblp.dtd                           # DTD officielle DBLP
+│ ├── dblp-2026-01-01.xml.gz # Snapshot DBLP (à télécharger séparément)
+│ └── dblp.dtd # DTD officielle DBLP
 │
-├── output/                                # Fichiers générés (créé automatiquement)
-│   ├── task1_histogram.txt
-│   ├── task2_histogram.txt
-│   └── task2_top10.txt
+├── output/ # Fichiers générés (créé automatiquement)
+│ ├── task1_histogram.txt
+│ ├── task2_histogram.txt
+│ └── task2_top10.txt
 │
+├── bonus_country_analysis.py # Script bonus (analyse des pays)
 └── README.md
-```
 
 ---
 
 ## Compilation
 
-Créez les dossiers `bin/` et `output/` si nécessaire :
+Créer les dossiers nécessaires :
 
 ```bash
 mkdir -p bin output
-```
 
-Depuis la racine du projet, compilez tous les fichiers Java :
-
-```bash
+Compiler le projet :
 javac -d bin \
   src/DblpPublicationGenerator.java \
   src/DblpParsingDemo.java \
@@ -61,76 +56,91 @@ javac -d bin \
   src/task2/DiameterCalculator.java \
   src/task2/Task2Processor.java \
   src/Main.java
-```
+Windows (ligne unique) :
+javac -d bin src/DblpPublicationGenerator.java src/DblpParsingDemo.java src/utils/AuthorUtils.java src/utils/HistogramWriter.java src/task1/UnionFind.java src/task1/Task1Processor.java src/task2/PairCounter.java src/task2/DirectedGraph.java src/task2/GraphBuilder.java src/task2/KosarajuSCC.java src/task2/DiameterCalculator.java src/task2/Task2Processor.java src/Main.java
 
-Sur Windows (une seule ligne) :
 
-```bash
-javac -d bin src/DblpPublicationGenerator.java src/DblpParsingDemo.java src/utils/AuthorUtils.java src/utils/HistogramWriter.java src/task1/UnionFind.java src/task1/Task1Processor.java src/task2/PairCounter.java src/task2/DirectedGraph.java src/task2/GraphBuilder.java src/task2/KosarajuSCC.java src/task2/DiameterCalculator.java src/task2/Task2Processor.java src/main.java
-```
+Exécution Java
 
----
-
-## Exécution
-
-### Run complet (tâche 1 + tâche 2)
-
-```bash
+Run complet
 java -Xmx4g -cp bin Main data/dblp-2026-01-01.xml.gz data/dblp.dtd
-```
 
-### Run limité aux N premières publications (test rapide)
-
-```bash
+Run avec limite (test rapide)
 java -Xmx4g -cp bin Main data/dblp-2026-01-01.xml.gz data/dblp.dtd --limit=500000
-```
 
-### Arguments attendus
 
-| Position | Argument | Obligatoire |
-|---|---|---|
-| 1 | Chemin vers `dblp.xml.gz` | Oui |
-| 2 | Chemin vers `dblp.dtd` | Oui |
-| 3 | `--limit=N` (nombre de publications max) | Non |
+Fichiers de sortie
+Tous les résultats sont dans output/ :
+Fichier	Description
+task1_histogram.txt	Histogramme des tailles des communautés
+task2_histogram.txt	Histogramme des SCC
+task2_top10.txt	Top 10 des SCC (taille, diamètre, membres)
 
----
 
-## Fichiers de sortie
 
-Tous les fichiers sont écrits dans le dossier `output/`.
+🟢 Bonus — Analyse des pays des auteurs
+Un script Python (bonus_country_analysis.py) permet d’analyser
+les pays d’origine des auteurs dans les 10 plus grandes communautés.
 
-| Fichier | Contenu |
-|---|---|
-| `output/task1_histogram.txt` | Histogramme des tailles des communautés (tâche 1) |
-| `output/task2_histogram.txt` | Histogramme des tailles des SCC (tâche 2) |
-| `output/task2_top10.txt` | Taille, diamètre et membres des 10 plus grandes SCC |
 
-En plus des fichiers, le programme affiche sur le terminal :
-- toutes les 100 000 publications : nombre de communautés et top 10 des tailles (tâche 1)
-- à la fin : résumé complet des deux tâches
+📌 Prérequis
+Python 3
+Installer les dépendances :
+pip install requests matplotlib
 
----
 
-## Remarques
+🔑 Clé API OpenAlex
+Le script nécessite une clé API OpenAlex.
 
-- Le fichier DBLP est traité en **mode streaming** (publication par publication) : le programme maintient un état cohérent à tout moment sans relire les publications passées.
-- L'option `-Xmx4g` alloue 4 Go de mémoire JVM. Sur le fichier complet, 3–4 Go sont nécessaires.
-- Le fichier `dblp-2026-01-01.xml.gz` peut être téléchargé à l'adresse suivante :
-  https://drops.dagstuhl.de/storage/artifacts/dblp/xml/2026/dblp-2026-01-01.xml.gz
+⚠️ Important : la clé n’est PAS incluse dans le projet.
+Définir la variable d’environnement :
+Linux / Mac
+export OPENALEX_API_KEY="YOUR_API_KEY_HERE"
+Windows (PowerShell)
+setx OPENALEX_API_KEY "YOUR_API_KEY_HERE"
 
----
+▶️ Exécution du bonus
+python bonus_country_analysis.py
 
-## Résumé des algorithmes
 
-| Tâche | Algorithme | Complexité |
-|---|---|---|
-| Tâche 1 | Union-Find (union par taille + compression de chemin) | O(α(n)) par opération |
-| Tâche 2 — online | Comptage de paires dans une HashMap | O(1) par paire |
-| Tâche 2 — SCC | Algorithme de Kosaraju (2 DFS itératifs) | O(V + E) |
-| Tâche 2 — diamètre | BFS depuis chaque nœud du sous-graphe induit | O(\|C\| × (\|C\| + \|E_C\|)) |
 
----
+⚠️ Comportement sans clé API
+Si aucune clé API n’est définie :
+le script s’arrête proprement
+aucun appel API n’est effectué
 
-## Utilisation de l'IA générative
 
-Certaines parties de ce code ont été assistées par Claude (Anthropic) pour la structure initiale et le débogage, conformément à la politique d'utilisation de l'IA du projet. L'ensemble du code a été relu, compris et peut être expliqué par les auteurs.
+📊 Résultats générés
+Dans output/country_stats/ :
+Fichier	Description
+community_X.png	Graphique des pays par communauté
+country_summary.json	Données complètes
+country_summary.txt	Résumé lisible
+openalex_cache.json	Cache des requêtes API
+
+
+
+💡 Remarques bonus
+Un cache est utilisé pour éviter les appels API répétés
+Une petite pause (sleep) évite le rate limiting
+Les auteurs non trouvés → "UNKNOWN"
+Remarques générales
+Traitement DBLP en streaming (pas de relecture complète)
+Mémoire recommandée : 3–4 Go
+Dataset DBLP :
+https://drops.dagstuhl.de/storage/artifacts/dblp/xml/2026/dblp-2026-01-01.xml.gz
+
+
+
+
+Résumé des algorithmes
+Tâche	Algorithme	Complexité
+Tâche 1	Union-Find	O(α(n))
+Tâche 2 (online)	HashMap	O(1)
+SCC	Kosaraju	O(V + E)
+Diamètre	BFS	O(
+Utilisation de l'IA générative
+Certaines parties du projet ont été assistées par Claude (Anthropic) pour :
+la structure initiale
+le débogage
+Le code final a été relu, compris et peut être expliqué par les auteurs.
