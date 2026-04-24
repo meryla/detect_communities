@@ -30,7 +30,6 @@ public class GraphBuilder {
                 int count       = innerEntry.getValue();
 
                 if (count >= PairCounter.THRESHOLD) {
-                    // This edge passed the threshold: add it to the graph.
                     graph.addEdge(firstAuthor, coAuthor);
                 }
             }

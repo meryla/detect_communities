@@ -3,8 +3,6 @@ package task2;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -20,7 +18,7 @@ import java.util.TreeMap;
  */
 public class Task2Processor {
 
-    // Online component: counts first-author → co-author pairs.
+    // Online component: counts first-author -> co-author pairs.
     private final PairCounter pairCounter;
 
     // Set after runOfflineAnalysis() is called.
@@ -31,10 +29,7 @@ public class Task2Processor {
         this.pairCounter = new PairCounter();
     }
 
-    // -----------------------------------------------------------------------
     // Online phase
-    // -----------------------------------------------------------------------
-
     /**
      * Must be called for every publication during the streaming phase.
      * Only publications with at least 2 authors contribute pair counts.
@@ -45,9 +40,7 @@ public class Task2Processor {
         pairCounter.processPublication(authors);
     }
 
-    // -----------------------------------------------------------------------
     // Offline phase
-    // -----------------------------------------------------------------------
 
     /**
      * Runs the full offline analysis:
@@ -69,17 +62,7 @@ public class Task2Processor {
 
         System.out.println("[Task 2] SCCs found: " + sccs.size());
     }
-
-    // -----------------------------------------------------------------------
     // Output
-    // -----------------------------------------------------------------------
-
-    /**
-     * @return all SCCs sorted by size descending (largest first).
-     */
-    public List<List<String>> getSccs() {
-        return sccs;
-    }
 
     /**
      * Writes the SCC size histogram to a file.

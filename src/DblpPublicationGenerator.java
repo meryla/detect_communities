@@ -19,7 +19,7 @@ import java.util.zip.GZIPInputStream;
 public final class DblpPublicationGenerator implements AutoCloseable {
 
     public static final class Publication {
-        public final String type;              // element name, e.g. "article"
+        public final String type;              // element name
         public final List<String> authors;     // ordered list
 
         public Publication(String type, List<String> authors) {

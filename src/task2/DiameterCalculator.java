@@ -41,7 +41,6 @@ public class DiameterCalculator {
             return 0;
         }
 
-        // Build a set for O(1) membership test: is a vertex in this SCC?
         Set<String> memberSet = new HashSet<>(component);
 
         int diameter = 0;

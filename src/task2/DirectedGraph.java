@@ -51,17 +51,16 @@ public class DirectedGraph {
         reverseAdj.get(to).add(from);
     }
 
-    /** @return all vertices of this graph */
     public Set<String> getVertices() {
         return adjList.keySet();
     }
 
-    /** @return neighbours of v in the original graph (u such that v → u) */
+    /** @return neighbours of v in the original graph  */
     public List<String> getNeighbours(String v) {
         return adjList.getOrDefault(v, Collections.emptyList());
     }
 
-    /** @return neighbours of v in the reverse graph (u such that u → v) */
+    /** @return neighbours of v in the reverse graph  */
     public List<String> getReverseNeighbours(String v) {
         return reverseAdj.getOrDefault(v, Collections.emptyList());
     }

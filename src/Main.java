@@ -14,9 +14,9 @@ import java.util.Optional;
  *   java -Xmx4g Main <dblp-xml.gz> <dblp.dtd> [--limit=N]
  *
  * Output files (written to the output/ directory):
- *   output/task1_histogram.txt  – community size histogram  (Task 1)
- *   output/task2_histogram.txt  – SCC size histogram        (Task 2)
- *   output/task2_top10.txt      – top-10 SCC details        (Task 2)
+ *   output/task1_histogram.txt  – community size histogram
+ *   output/task2_histogram.txt  – SCC size histogram
+ *   output/task2_top10.txt      – top-10 SCC details
  */
 public class Main {
 
@@ -37,36 +37,25 @@ public class Main {
 
         String xmlPath = args[0];
         String dtdPath = args[1];
-
-        // Optional publication limit (useful for quick tests).
         int limit = Integer.MAX_VALUE;
         for (int i = 2; i < args.length; i++) {
             if (args[i].startsWith("--limit=")) {
                 limit = Integer.parseInt(args[i].substring("--limit=".length()));
             }
         }
-
-        // Disable XML entity expansion limits (safe for local DBLP DTD).
         System.setProperty("jdk.xml.entityExpansionLimit",        "0");
         System.setProperty("jdk.xml.totalEntitySizeLimit",        "0");
         System.setProperty("jdk.xml.maxGeneralEntitySizeLimit",   "0");
         System.setProperty("jdk.xml.maxParameterEntitySizeLimit", "0");
 
-        // Initialise both task processors.
+        // Initialise both tasks
         Task1Processor task1 = new Task1Processor(PRINT_EVERY);
         Task2Processor task2 = new Task2Processor();
-
-        System.out.println("=================================================");
-        System.out.println(" DBLP Community Detection — INFO-F-203 2025/2026");
-        System.out.println("=================================================");
+        System.out.println(" DBLP Community Detection");
         System.out.println("XML  : " + xmlPath);
         System.out.println("DTD  : " + dtdPath);
         if (limit != Integer.MAX_VALUE) System.out.println("Limit: " + limit);
         System.out.println();
-
-        // ------------------------------------------------------------------ //
-        //  Streaming / online phase
-        // ------------------------------------------------------------------ //
         long pubCount = 0;
         long startTime = System.currentTimeMillis();
 
@@ -78,15 +67,11 @@ public class Main {
 
                 pubCount++;
                 List<String> rawAuthors = opt.get().authors;
-
                 // Clean once; share the cleaned list between both tasks.
                 List<String> authors = AuthorUtils.cleanAuthors(rawAuthors);
-
-                // Task 1: union-find (works for any number of authors >= 1).
+                // Task 1: union-find
                 task1.processPublication(authors);
-
-                // Task 2: pair counting (only meaningful with >= 2 authors;
-                //         Task2Processor handles the size guard internally).
+                // Task 2: pair counting
                 task2.processPublication(authors);
             }
 
@@ -99,10 +84,6 @@ public class Main {
         long parsingMs = System.currentTimeMillis() - startTime;
         System.out.printf("%nParsing done: %,d publications in %.1f s%n",
                 pubCount, parsingMs / 1000.0);
-
-        // ------------------------------------------------------------------ //
-        //  Final Task 1 output
-        // ------------------------------------------------------------------ //
         System.out.println("\n--- Task 1: Final results ---");
         System.out.println("Communities: " + task1.getCommunityCount());
 
@@ -112,10 +93,6 @@ public class Main {
         } catch (Exception e) {
             System.err.println("Could not write Task 1 histogram: " + e.getMessage());
         }
-
-        // ------------------------------------------------------------------ //
-        //  Offline phase: Task 2
-        // ------------------------------------------------------------------ //
         System.out.println("\n--- Task 2: Offline analysis ---");
         long t2Start = System.currentTimeMillis();
 

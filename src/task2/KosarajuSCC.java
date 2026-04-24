@@ -40,10 +40,7 @@ public class KosarajuSCC {
      *         The list is sorted by SCC size in descending order.
      */
     public static List<List<String>> compute(DirectedGraph graph) {
-
-        // ------------------------------------------------------------------ //
-        // Pass 1: iterative DFS on original graph → build finish-order stack  //
-        // ------------------------------------------------------------------ //
+        // Pass 1: iterative DFS on original graph
         Deque<String> finishStack = new ArrayDeque<>();
         Map<String, Boolean> visited = new HashMap<>();
 
@@ -52,10 +49,7 @@ public class KosarajuSCC {
                 dfsPass1(graph, vertex, visited, finishStack);
             }
         }
-
-        // ------------------------------------------------------------------ //
-        // Pass 2: iterative DFS on reverse graph → collect SCCs               //
-        // ------------------------------------------------------------------ //
+        // Pass 2:  collect SCCs
         List<List<String>> sccs = new ArrayList<>();
         visited.clear();
 
@@ -68,29 +62,26 @@ public class KosarajuSCC {
             }
         }
 
-        // Sort SCCs by size descending so sccs.get(0) is the largest.
+        // Sort SCCs by size descending
         sccs.sort((c1, c2) -> c2.size() - c1.size());
 
         return sccs;
     }
-
-    // -----------------------------------------------------------------------
     // Pass 1: iterative post-order DFS on the original graph
-    // -----------------------------------------------------------------------
 
     /*
-     * We simulate the call stack explicitly with a Deque.
-     * Each frame stores the vertex and an iterator over its neighbours.
+     * We simulate the call stack explicitly with a Deque
+     * Each frame stores the vertex and an iterator over its neighbours
      *
-     * When a vertex's iterator is exhausted (no more unvisited neighbours),
-     * that vertex is "finished": we push it onto finishStack.
+     * When a vertex's iterator is exhausted (no more unvisited neighbours)
+     * that vertex is "finished": we push it onto finishStack
      */
     private static void dfsPass1(DirectedGraph graph,
                                   String start,
                                   Map<String, Boolean> visited,
                                   Deque<String> finishStack) {
 
-        // callStack holds (vertex, iterator-over-its-neighbours) pairs.
+        // callStack holds (vertex, iterator over its neighbours) pairs
         Deque<Map.Entry<String, java.util.Iterator<String>>> callStack = new ArrayDeque<>();
 
         visited.put(start, true);
@@ -115,9 +106,7 @@ public class KosarajuSCC {
         }
     }
 
-    // -----------------------------------------------------------------------
     // Pass 2: iterative DFS on the reverse graph, collecting one SCC
-    // -----------------------------------------------------------------------
 
     /*
      * Standard iterative DFS.  All nodes reachable from `start` in the

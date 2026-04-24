@@ -22,7 +22,7 @@ import java.util.Set;
  */
 public class PairCounter {
 
-    // An edge A → B is kept only when its count reaches this value.
+    // An edge A -> B is kept only when its count reaches this value.
     public static final int THRESHOLD = 6;
 
     /*
@@ -46,7 +46,7 @@ public class PairCounter {
      * Duplicate co-author names within a single publication are counted
      * only once (rare in DBLP but explicitly handled).
      *
-     * @param authors cleaned, ordered author list (authors.get(0) is first author)
+     * @param authors cleaned, ordered author list
      */
     public void processPublication(List<String> authors) {
         if (authors == null || authors.size() < 2) {
@@ -57,7 +57,7 @@ public class PairCounter {
 
         // Use a local set to avoid double-counting duplicates in the same publication.
         Set<String> seenCoAuthors = new HashSet<>();
-        seenCoAuthors.add(firstAuthor); // prevent self-loop A → A
+        seenCoAuthors.add(firstAuthor); // prevent self-loop A -> A
 
         Map<String, Integer> firstAuthorCounts =
                 pairCount.computeIfAbsent(firstAuthor, k -> new HashMap<>());
