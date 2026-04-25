@@ -4,20 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- * This class implements Union-Find (Disjoint Set).
- * It is used to group authors into communities.
+ * This class is a Union-Find (Disjoint Set) implementation.
+ * It helps group authors into communities.
  */
 public class UnionFind {
 
-    // parent[x] = parent of x in the tree
-    // if parent[x] == x → x is the root
+    // parent[x] tells who the parent of x is
+    // if parent[x] == x, then x is the root of a group
     private final Map<String, String> parent;
 
-    // size[root] = number of elements in that community
-    // only valid for roots
+    // size[root] stores how big each community is
+    // only makes sense for root nodes
     private final Map<String, Integer> size;
 
-    // total number of separate communities
+    // keeps track of how many separate groups we have
     private int componentCount;
 
     public UnionFind() {
@@ -27,27 +27,27 @@ public class UnionFind {
     }
 
     /*
-     * Adds a new author if not already present.
-     * Initially, each author is its own parent (own community).
+     * Adds a new author if they are not already in the structure.
+     * At the start, each author is in their own group.
      */
     public void addIfAbsent(String author) {
         if (!parent.containsKey(author)) {
-            parent.put(author, author); // points to itself
-            size.put(author, 1);        // size = 1
-            componentCount++;           // new community created
+            parent.put(author, author); // parent is itself at first
+            size.put(author, 1);        // group size starts at 1
+            componentCount++;           // new group added
         }
     }
 
     /*
-     * Finds the root of the set containing 'author'.
+     * Finds the root (representative) of the author's group.
      *
-     * Path compression:
-     * we make nodes point directly to the root to speed things up.
+     * Uses path compression:
+     * makes future lookups faster by shortening the tree.
      */
     public String find(String author) {
         String p = parent.get(author);
 
-        // if not root, recursively find root and compress path
+        // if it's not the root, go up and compress the path
         if (!p.equals(author)) {
             parent.put(author, find(p));
         }
@@ -56,21 +56,21 @@ public class UnionFind {
     }
 
     /*
-     * Merges the sets of a and b.
+     * Joins the groups of a and b.
      *
      * Uses union by size:
-     * smaller tree goes under the bigger one.
+     * smaller group gets attached under the bigger one.
      */
     public void union(String a, String b) {
 
-        // make sure both exist
+        // make sure both authors exist
         addIfAbsent(a);
         addIfAbsent(b);
 
         String rootA = find(a);
         String rootB = find(b);
 
-        // if already in same set → nothing to do
+        // if they are already in the same group, do nothing
         if (rootA.equals(rootB)) {
             return;
         }
@@ -78,7 +78,7 @@ public class UnionFind {
         int sizeA = size.get(rootA);
         int sizeB = size.get(rootB);
 
-        // make sure rootA is the bigger tree
+        // make sure rootA is always the bigger group
         if (sizeA < sizeB) {
 
             // swap roots
@@ -86,35 +86,35 @@ public class UnionFind {
             rootA = rootB;
             rootB = tmpRoot;
 
-            // swap sizes
+            // swap sizes too
             int tmpSize = sizeA;
             sizeA = sizeB;
             sizeB = tmpSize;
         }
 
-        // attach smaller rootB under larger rootA
+        // attach smaller rootB under bigger rootA
         parent.put(rootB, rootA);
 
-        // update size of the new root
+        // update the size of the new combined group
         size.put(rootA, sizeA + sizeB);
 
-        // rootB is no longer a root → remove its size entry
+        // rootB is no longer a root, so remove it from size map
         size.remove(rootB);
 
-        // one less community after merging
+        // total number of groups goes down by 1
         componentCount--;
     }
 
     /*
-     * Returns number of current communities.
+     * Returns how many separate groups exist right now
      */
     public int getComponentCount() {
         return componentCount;
     }
 
     /*
-     * Returns a copy of root → size map.
-     * (we return a copy so outside code can't modify internal data)
+     * Returns a copy of the root = size map
+     * (so external code doesn't mess with internal data)
      */
     public Map<String, Integer> getRootSizes() {
         return new HashMap<>(size);

@@ -4,13 +4,13 @@
 project/
 ├── src/
 │ ├── main.java # Point d'entrée principal
-│ ├── DblpPublicationGenerator.java # Parseur fourni (ne pas modifier)
-│ ├── DblpParsingDemo.java # Démo fournie (ne pas modifier)
+│ ├── DblpPublicationGenerator.java # Parseur fourni 
+│ ├── DblpParsingDemo.java # Démo fournie 
 │ ├── task1/
 │ │ ├── UnionFind.java # Structure Union-Find
 │ │ └── Task1Processor.java # Logique de la tâche 1
 │ ├── task2/
-│ │ ├── PairCounter.java # Comptage en ligne des paires (A → B)
+│ │ ├── PairCounter.java # Comptage en ligne des paires (A -> B)
 │ │ ├── DirectedGraph.java # Structure graphe orienté
 │ │ ├── GraphBuilder.java # Construction du graphe filtré (seuil >= 6)
 │ │ ├── KosarajuSCC.java # Algorithme de Kosaraju (SCC)
@@ -92,10 +92,14 @@ pip install requests matplotlib
 🔑 Clé API OpenAlex
 Le script nécessite une clé API OpenAlex.
 
-⚠️ Important : la clé n’est PAS incluse dans le projet.
+ Important : la clé n’est PAS incluse dans le projet.
 Définir la variable d’environnement :
+
 Linux / Mac
 export OPENALEX_API_KEY="YOUR_API_KEY_HERE"
+
+# put your api key  
+
 Windows (PowerShell)
 setx OPENALEX_API_KEY "YOUR_API_KEY_HERE"
 
