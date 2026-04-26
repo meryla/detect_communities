@@ -1,36 +1,44 @@
 # README.md — Projet Algorithmique 2 (DBLP Communities)
 
 ## Structure du projet
+
+```
 project/
 ├── src/
-│ ├── main.java # Point d'entrée principal
-│ ├── DblpPublicationGenerator.java # Parseur fourni 
-│ ├── DblpParsingDemo.java # Démo fournie 
-│ ├── task1/
-│ │ ├── UnionFind.java # Structure Union-Find
-│ │ └── Task1Processor.java # Logique de la tâche 1
-│ ├── task2/
-│ │ ├── PairCounter.java # Comptage en ligne des paires (A -> B)
-│ │ ├── DirectedGraph.java # Structure graphe orienté
-│ │ ├── GraphBuilder.java # Construction du graphe filtré (seuil >= 6)
-│ │ ├── KosarajuSCC.java # Algorithme de Kosaraju (SCC)
-│ │ ├── DiameterCalculator.java # Calcul du diamètre par BFS
-│ │ └── Task2Processor.java # Orchestrateur de la tâche 2
-│ └── utils/
-│ ├── AuthorUtils.java # Nettoyage des listes d'auteurs
-│ └── HistogramWriter.java # Écriture des histogrammes
+│   ├── Main.java                        # Point d'entrée principal
+│   ├── DblpPublicationGenerator.java    # Parseur fourni (ne pas modifier)
+│   ├── DblpParsingDemo.java             # Démo fournie (ne pas modifier)
+│   ├── task1/
+│   │   ├── UnionFind.java               # Structure Union-Find
+│   │   └── Task1Processor.java          # Logique de la tâche 1
+│   ├── task2/
+│   │   ├── PairCounter.java             # Comptage en ligne des paires (A → B)
+│   │   ├── DirectedGraph.java           # Structure graphe orienté
+│   │   ├── GraphBuilder.java            # Construction du graphe filtré (seuil >= 6)
+│   │   ├── KosarajuSCC.java             # Algorithme de Kosaraju (SCC)
+│   │   ├── DiameterCalculator.java      # Calcul du diamètre par BFS
+│   │   └── Task2Processor.java          # Orchestrateur de la tâche 2
+│   └── utils/
+│       ├── AuthorUtils.java             # Nettoyage des listes d'auteurs
+│       └── HistogramWriter.java         # Écriture des histogrammes
 │
 ├── data/
-│ ├── dblp-2026-01-01.xml.gz # Snapshot DBLP (à télécharger séparément)
-│ └── dblp.dtd # DTD officielle DBLP
+│   ├── dblp-2026-01-01.xml.gz           # Snapshot DBLP (à télécharger séparément)
+│   └── dblp.dtd                         # DTD officielle DBLP
 │
-├── output/ # Fichiers générés (créé automatiquement)
-│ ├── task1_histogram.txt
-│ ├── task2_histogram.txt
-│ └── task2_top10.txt
+├── output/                              # Fichiers générés (créé automatiquement)
+│   ├── task1_histogram.txt
+│   ├── task2_histogram.txt
+│   ├── task2_top10.txt
+│   └── country_stats/                   # Résultats du bonus
+│       ├── community_X_countries.png
+│       ├── country_summary.json
+│       ├── country_summary.txt
+│       └── openalex_cache.json
 │
-├── bonus_country_analysis.py # Script bonus (analyse des pays)
+├── bonus_countries.py                   # Script bonus (analyse des pays)
 └── README.md
+```
 
 ---
 
@@ -40,8 +48,11 @@ Créer les dossiers nécessaires :
 
 ```bash
 mkdir -p bin output
+```
 
 Compiler le projet :
+
+```bash
 javac -d bin \
   src/DblpPublicationGenerator.java \
   src/DblpParsingDemo.java \
@@ -56,95 +67,83 @@ javac -d bin \
   src/task2/DiameterCalculator.java \
   src/task2/Task2Processor.java \
   src/Main.java
-Windows (ligne unique) :
+```
+
+Windows  :
+
+```bash
 javac -d bin src/DblpPublicationGenerator.java src/DblpParsingDemo.java src/utils/AuthorUtils.java src/utils/HistogramWriter.java src/task1/UnionFind.java src/task1/Task1Processor.java src/task2/PairCounter.java src/task2/DirectedGraph.java src/task2/GraphBuilder.java src/task2/KosarajuSCC.java src/task2/DiameterCalculator.java src/task2/Task2Processor.java src/Main.java
+```
 
+---
 
-Exécution Java
+## Exécution Java
 
-Run complet
+Run complet :
+
+```bash
 java -Xmx4g -cp bin Main data/dblp-2026-01-01.xml.gz data/dblp.dtd
+```
 
-Run avec limite (test rapide)
+Run avec limite (test rapide) :
+
+```bash
 java -Xmx4g -cp bin Main data/dblp-2026-01-01.xml.gz data/dblp.dtd --limit=500000
+```
 
+### Arguments
 
-Fichiers de sortie
-Tous les résultats sont dans output/ :
-Fichier	Description
-task1_histogram.txt	Histogramme des tailles des communautés
-task2_histogram.txt	Histogramme des SCC
-task2_top10.txt	Top 10 des SCC (taille, diamètre, membres)
+| Position | Argument | Obligatoire |
+|---|---|---|
+| 1 | Chemin vers `dblp.xml.gz` | Oui |
+| 2 | Chemin vers `dblp.dtd` | Oui |
+| 3 | `--limit=N` | Non |
 
+---
 
+## Fichiers de sortie Java
 
-🟢 Bonus — Analyse des pays des auteurs
-Un script Python (bonus_country_analysis.py) permet d’analyser
-les pays d’origine des auteurs dans les 10 plus grandes communautés.
+| Fichier | Description |
+|---|---|
+| `task1_histogram.txt` | Histogramme des tailles des communautés (Tâche 1) |
+| `task2_histogram.txt` | Histogramme des tailles des SCC (Tâche 2) |
+| `task2_top10.txt` | Top 10 des SCC : taille, diamètre, membres |
 
+---
 
-📌 Prérequis
-Python 3
-Installer les dépendances :
+## Bonus — Analyse des pays
+
+Le script `bonus_countries.py` analyse la répartition géographique des auteurs dans les 10 plus grandes SCC via l'API OpenAlex (publique et gratuite, aucune clé requise).
+
+### Prérequis
+
+```bash
 pip install requests matplotlib
+```
+
+### Exécution
+
+```bash
+python bonus_countries.py
+```
+
+### Résultats générés dans `output/country_stats/`
+
+| Fichier | Description |
+|---|---|
+| `community_X_countries.png` | Graphique des pays par communauté |
+| `country_summary.json` | Données complètes en JSON |
+| `country_summary.txt` | Résumé lisible |
+| `openalex_cache.json` | Cache des requêtes (évite les appels répétés) |
+
+---
+
+## Remarques
+
+- Traitement DBLP en **streaming** : état cohérent maintenu publication par publication, sans relecture.
+- Mémoire recommandée : `-Xmx4g` (3–4 Go suffisent pour le dataset complet).
+- Dataset DBLP : https://drops.dagstuhl.de/storage/artifacts/dblp/xml/2026/dblp-2026-01-01.xml.gz
+
+---
 
 
-🔑 Clé API OpenAlex
-Le script nécessite une clé API OpenAlex.
-
- Important : la clé n’est PAS incluse dans le projet.
-Définir la variable d’environnement :
-
-Linux / Mac
-export OPENALEX_API_KEY="YOUR_API_KEY_HERE"
-
-# put your api key  
-
-Windows (PowerShell)
-setx OPENALEX_API_KEY "YOUR_API_KEY_HERE"
-
-▶️ Exécution du bonus
-python bonus_country_analysis.py
-
-
-
-⚠️ Comportement sans clé API
-Si aucune clé API n’est définie :
-le script s’arrête proprement
-aucun appel API n’est effectué
-
-
-📊 Résultats générés
-Dans output/country_stats/ :
-Fichier	Description
-community_X.png	Graphique des pays par communauté
-country_summary.json	Données complètes
-country_summary.txt	Résumé lisible
-openalex_cache.json	Cache des requêtes API
-
-
-
-💡 Remarques bonus
-Un cache est utilisé pour éviter les appels API répétés
-Une petite pause (sleep) évite le rate limiting
-Les auteurs non trouvés → "UNKNOWN"
-Remarques générales
-Traitement DBLP en streaming (pas de relecture complète)
-Mémoire recommandée : 3–4 Go
-Dataset DBLP :
-https://drops.dagstuhl.de/storage/artifacts/dblp/xml/2026/dblp-2026-01-01.xml.gz
-
-
-
-
-Résumé des algorithmes
-Tâche	Algorithme	Complexité
-Tâche 1	Union-Find	O(α(n))
-Tâche 2 (online)	HashMap	O(1)
-SCC	Kosaraju	O(V + E)
-Diamètre	BFS	O(
-Utilisation de l'IA générative
-Certaines parties du projet ont été assistées par Claude (Anthropic) pour :
-la structure initiale
-le débogage
-Le code final a été relu, compris et peut être expliqué par les auteurs.
